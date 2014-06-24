@@ -15,10 +15,12 @@
             <br>
             <button class="click"">Add</button>
             <button class="click_less">Remove</button>
+            <button class="color">Randomize Color</button>
   </div>
 </body>
 
 <script>
+
   var myBall = $('.circle');
 
   $('.click').click(function () {
@@ -35,5 +37,15 @@
       });
   });
 
+
+  $(".color").click(function () {
+    var newColor = Math.floor(Math.random()*16777215).toString(16);
+    newColor = "\"#" + newColor + "\"";
+    console.log(newColor)
+				$(".circle").css({
+				          transition: 'background-color 1s ease-in-out',
+				              "background-color": newColor
+				      });
+				  });
 </script>
 </html>
