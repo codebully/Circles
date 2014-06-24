@@ -2,40 +2,33 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
     <title>Circles and Stuff</title>
 </head>
-<body>
-    <div id="circle" class="circle">meow</div>
 
-    <button class="click"">Add</button>
+<body>
+    <div class="main_div">
+        <div class="wrapper">
+            <div class="circle">meow</div>
+
+            <button class="click"">Add</button>
+        </div>
+    </div>
 </body>
 
-<style>
-    .circle {
-        width: 100px;
-        height: 100px;
-        border-radius: 100%;
-        color: #ffffff;
-        line-height: 100px;
-        text-align: center;
-        background: #000000;
-    }
-</style>
-
 <script>
+  var itemsToResize = $('.circle');
 
-    var itemsToResize = $('.circle');
-
-    $('.click').click(function () {
-        itemsToResize.css({
-            'width' : itemsToResize.width()  * 1.1
-            , 'height': itemsToResize.height() * 1.1
-        });
-    });
-
-
+  $('.click').click(function () {
+      itemsToResize.css({
+          'width' : itemsToResize.width()  * 1.1
+          , 'height': itemsToResize.height() * 1.1
+      });
+  });
 </script>
+
 
 </html>
