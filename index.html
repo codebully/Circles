@@ -10,25 +10,30 @@
 </head>
 
 <body>
-    <div class="main_div">
-        <div class="wrapper">
-            <div class="circle">meow</div>
-
+  <div class="main_div">
+            <div class="circle"></div>
+            <br>
             <button class="click"">Add</button>
-        </div>
-    </div>
+            <button class="click_less">Remove</button>
+  </div>
 </body>
 
 <script>
-  var itemsToResize = $('.circle');
+  var myBall = $('.circle');
 
   $('.click').click(function () {
-      itemsToResize.css({
-          'width' : itemsToResize.width()  * 1.1
-          , 'height': itemsToResize.height() * 1.1
+      myBall.css({
+          'width' : myBall.width()  * 1.1
+          , 'height': myBall.height() * 1.1
       });
   });
+
+  $('.click_less').click(function () {
+      myBall.css({
+          'width' : myBall.width()  / 1.1
+          , 'height': myBall.height() / 1.1
+      });
+  });
+
 </script>
-
-
 </html>
